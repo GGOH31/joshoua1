@@ -38,32 +38,56 @@ class PagesController extends AppController
      * @throws \Cake\Http\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
-    public function display(...$path)
+    public function initialize()
     {
-        $count = count($path);
-        if (!$count) {
-            return $this->redirect('/');
-        }
-        if (in_array('..', $path, true) || in_array('.', $path, true)) {
-            throw new ForbiddenException();
-        }
-        $page = $subpage = null;
+        parent::initialize();
+        $this->loadModel('Abouts');
+        $this->loadModel('Contacts');
+        $this->loadModel('Portfolios');
+        $this->loadModel('Services');
+        $this->loadModel('Questions');
+        $this->loadModel('Teames');
+        $this->loadModel('Users');
+        $this->loadModel('Slides');
 
-        if (!empty($path[0])) {
-            $page = $path[0];
-        }
-        if (!empty($path[1])) {
-            $subpage = $path[1];
-        }
-        $this->set(compact('page', 'subpage'));
-
-        try {
-            $this->render(implode('/', $path));
-        } catch (MissingTemplateException $exception) {
-            if (Configure::read('debug')) {
-                throw $exception;
-            }
-            throw new NotFoundException();
-        }
+    
+    
+    
     }
+
+
+    public function display (){
+        $this->paginate = [
+            'limit' => 3,
+            'order'=>['created'=>'DESC']
+        ];
+        $services = $this->paginate($this->Services);
+        
+        $this->paginate = [
+             'contain' => ['Services'],
+         ];
+         $portfolios = $this->paginate($this->Portfolios);
+         
+
+
+        $abouts =   $this->Abouts->find('all', [
+            'conditions' => ['valide' => 1],
+            'limit' => 1,
+            'order'=>['id'=>'DESC']
+            ])->toArray();
+
+
+            foreach ($abouts as  $about) {
+                # code...
+              
+                
+            }
+           
+
+        $this->set(compact('about','services','portfolios'));
+
+    }
+
+
+
 }

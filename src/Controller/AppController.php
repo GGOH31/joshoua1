@@ -45,6 +45,15 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
+        if ($this->request->getParam('prefix') == 'backend') {
+            //   $this->loadComponent('Auth');
+             # code...
+              
+               //Set the layout;
+               $this->viewBuilder()->setLayout("backendLayout");
+        
+           
+           }
 
         /*
          * Enable the following component for recommended CakePHP security settings.
