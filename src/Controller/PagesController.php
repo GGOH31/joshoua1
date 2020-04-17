@@ -18,6 +18,7 @@ use Cake\Core\Configure;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
+use Cake\Event\Event;
 
 /**
  * Static content controller
@@ -28,7 +29,10 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
-
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['display','humanitaire', 'detail','humanitaires','export','import','acceuil']);
+    }
     /**
      * Displays a view
      *
@@ -49,6 +53,7 @@ class PagesController extends AppController
         $this->loadModel('Teames');
         $this->loadModel('Users');
         $this->loadModel('Slides');
+        $this->loadModel('Articles');
 
     
     
@@ -67,8 +72,12 @@ class PagesController extends AppController
              'contain' => ['Services'],
          ];
          $portfolios = $this->paginate($this->Portfolios);
-         
-
+       /*  
+foreach ($portfolios as $key => $portfolio) {
+    debug($portfolio);
+    # code...
+}
+die();*/
 
         $abouts =   $this->Abouts->find('all', [
             'conditions' => ['valide' => 1],
@@ -86,6 +95,43 @@ class PagesController extends AppController
 
         $this->set(compact('about','services','portfolios'));
 
+    }
+
+    public function humanitaire(){
+
+
+        $articles = $this->paginate($this->Articles);
+
+        $this->set(compact('articles'));
+
+    }
+
+    public function humanitaires(){
+            
+               }
+
+    public function import()
+    {
+        $this->viewBuilder()->setLayout("font_2_layout");
+                
+                   
+    }
+
+    public function detail($id = null)
+    {
+        $article = $this->Articles->get($id, [
+            'contain' => [],
+        ]);
+        $articleAll = $this->Articles->find('all')->toArray();
+
+        $this->set(compact('article','articleAll'));
+    }
+
+
+    public function acceuil (){
+        $this->viewBuilder()->setLayout("fontLayout");
+        $acceuil="acceuil";
+        $this->set(compact('acceuil'));
     }
 
 

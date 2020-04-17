@@ -53,11 +53,13 @@ class PortfoliosController extends AppController
         $portfolio = $this->Portfolios->newEntity();
         if ($this->request->is('post')) {
             $image=$this->request->getData('image');
+            
             $extensions = array('.png', '.gif', '.jpg', '.jpeg');
             $extension = strrchr($image['name'], '.');
-            $taille_maxi = 100000;
+            $taille_maxi = 1000000;
             $taille = filesize($image['tmp_name']);
             //debug($image);
+           
            
             if (!in_array($extension, $extensions)) {
                 $this->Flash->error(__('Vous devez uploader un fichier de type png, gif, jpg, jpeg, txt ou doc...'));
@@ -75,7 +77,10 @@ class PortfoliosController extends AppController
             $portfolio['imagename']=md5(time()) . '_' . $image["name"];
             $portfolio['imagepath']="webroot/portfolio/";
             $get_fille= $portfolio['imagepath'].$portfolio['imagename'];
-            if (move_uploaded_file($image["tmp_name"], $get_fille)) {
+
+
+
+            if ( move_uploaded_file($image["tmp_name"], $get_fille) ) {
                 # code...
             
            /* debug($portfolio);

@@ -14,6 +14,7 @@ class AdminsController extends AppController{
         $this->loadModel('Porfolios');
         $this->loadModel('Services');
         $this->loadModel('Questions');
+        $this->loadModel('Messages');
         $this->loadModel('Teames');
         $this->loadModel('Users');
         $this->loadModel('Slides');
@@ -26,6 +27,18 @@ class AdminsController extends AppController{
 
 
 public function index(){
+    $messages = $this->Messages->find('all')->toArray();
+    
+    $messTotal= count($messages);
+    $messageslu = $this->Messages->find('all')
+                       -> where(['lu'=>0])->toArray();
+     $messagesluTotal= count($messageslu);
+     $messagesvu = $this->Messages->find('all')
+     -> where(['lu'=>1])->toArray();
+$messagesvuTotal= count($messagesvu);
+
+    $this->set(compact('messages','messTotal','messagesluTotal','messagesvuTotal'));
+
 
 }
 

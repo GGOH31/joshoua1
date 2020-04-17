@@ -54,6 +54,27 @@ class AppController extends Controller
         
            
            }
+           
+
+
+           $this->loadComponent('Auth', [
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password',
+                        'finder' => 'auth'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+               
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+             // If unauthorized, return them to page they were just on
+            'unauthorizedRedirect' => $this->referer()
+        ]);
 
         /*
          * Enable the following component for recommended CakePHP security settings.

@@ -53,6 +53,7 @@ Router::prefix('backend', function ($routes) {
     $routes->fallbacks('InflectedRoute');
 
 });
+
 Router::scope('/', function (RouteBuilder $routes) {
     // Register scoped middleware for in scopes.
    /* $routes->registerMiddleware('csrf', new CsrfProtectionMiddleware([
@@ -71,12 +72,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
 
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    $routes->connect('/', ['controller' => 'Pages', 'action' => 'acceuil', 'home']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'acceuil']);
 
     /**
      * Connect catchall routes for all controllers.

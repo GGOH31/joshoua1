@@ -2,6 +2,7 @@
 namespace App\Controller\Backend;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Users Controller
@@ -12,6 +13,17 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
+
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['login']);
+    }
+
+    public function initialize()
+    {
+        parent::initialize();
+        $this->viewBuilder()->setLayout("login");
+    }
     /**
      * Index method
      *
@@ -59,6 +71,45 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    public function login()
+    {
+        if ($this->request->is('post')) {
+            $donne=$this->request->data;
+            
+            $user = $this->Auth->identify();
+           /* debug( $user);
+            die();*/
+            if ($user) {
+                $this->Auth->setUser($user);
+              
+                        # code...
+                        return $this->redirect('backend');
+                  
+              
+                
+            }
+            $this->Flash->error('Your username or password is incorrect.');
+        }
+    }
+
+
+
+    public function logout()
+{
+    $this->redirect($this->Auth->logout());
+}
 
     /**
      * Edit method

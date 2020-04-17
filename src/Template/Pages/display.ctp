@@ -59,17 +59,27 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a href="index.html"><span>Joshua <strong>Consulting</strong></span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <img src="/humanitaire/images/tran.png"  class="img-fluid img-thumbnail" style="width:10%; " alt="" />
+     
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#header">Acceuil</a></li>
+          <li class="active"><a href="/">Acceuil</a></li>
           <li><a href="#about">A propos</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+         
+          <li class="drop-down"><a href="">Services</a>
+            <ul>
+            <li><a href="/Pages/humanitaires">CAbiner Humanitaire</a></li>
+              <li><a href="/Pages/import">Import / Export</a></li>
+              <li><a href="#">Fourniture de bureau et divers</a></li>
+
+            
+              <li><a href="#">Communication et Evernementielle</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="#portfolio">Galerie</a></li>
          <!-- <li><a href="#team">Team</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
@@ -105,11 +115,10 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url('assets/img/slide/slideg.jpg');">
+          <div class="carousel-item active" style="background-image: url('assets/img/slide/bureau2.jpeg');">
             <div class="carousel-container">
               <div class="carousel-content container">
-                <h2 class="animated fadeInDown">Nous   formons   vos   équipes <br>  d’aujourd’hui
-et   de  demain  </h2>
+                <h2 class="animated fadeInDown">Fourniture de bureau et divers</h2>
                 
                <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>-->
               </div>
@@ -117,10 +126,10 @@ et   de  demain  </h2>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/slide.jpg');">
+          <div class="carousel-item" style="background-image: url('assets/img/slide/TI3QsY.jpg');">
             <div class="carousel-container">
             <div class="carousel-content container">
-                <h2 class="animated fadeInDown">Des SOLUTIONS ADAPTéES <br><span >à TOUS LES BESOINS <span></h2>
+                <h2 class="animated fadeInDown">Import / Export</h2>
 
               <!--  <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>-->
               </div>
@@ -131,7 +140,7 @@ et   de  demain  </h2>
           <div class="carousel-item" style="background-image: url('assets/img/slide/slidej.jpg');">
             <div class="carousel-container">
             <div class="carousel-content container">
-                <h2><span class="animated fadeInDown">Notre métier au service</span><br> <span class="animated fadeInUp">de la communauté humanitaire</span>  </h2>
+                <h2><span class="animated fadeInDown">CAbiner Humanitaire</span> </h2>
                
                <!-- <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>-->
               </div>
@@ -158,7 +167,8 @@ et   de  demain  </h2>
 
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/ABOUT.jpeg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           
           </div>
          
@@ -167,14 +177,28 @@ et   de  demain  </h2>
             <div class="section-title">
               <h2>A PROPOS</h2>
 
- 
+             <h3> JOSHUA CONSULTING </h3> <p>est une SARL spécialisée dans <strong>le négoce ; import-export, fournitures de bureau et divers, communication et évènementielle, et expertise.</strong> 
+Dotée d’une expertise dans ces différents domaines; JOSHUA entreprise dispose de plusieurs 
+services et produits en un avec une satisfaction garantie. Elle apporte un impact social 
+se traduisant par les packages de services et produits de qualité qu’elle offre a court réduit accessible a tous </p>
 
-  <?=$about['description']?>
+  <?//=$about['description']?>
 
 
               </div>
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="icofont-earth"></i></div>
+              <a href="/Pages/humanitaires"><h4 class="title">NOUS RÉPONDONS AUX DÉFIS ACTUELS DU MONDE HUMANITAIRE...</h4>
+              <p class="description">Le défi actuel des organisations de la société civile et des acteurs de la réponse aux crises humanitaires pour une grande
+                 part est le au manque de personnes qualifiées et disponibles.</p></a>
+            </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+              <h4 class="title"><a href="">NOTRE MÉTIER AU SERVCIE DU COMMERCE INTERNATIONAL</a></h4>
+              <p class="description">une équipe  exigeantes qui maitrise l’environnement du commerce extérieur </p>
+            </div>
+           <!-- <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
              
               <h4 class="title"><a href=""> <?=$about['subtext_title1']?>.</a></h4>
               <p class="description"> <?=$about['subtext1']?></p>
@@ -184,7 +208,7 @@ et   de  demain  </h2>
               
               <h4 class="title"><a href=""> <?=$about['subtext_title2']?></a></h4>
               <p class="description"> <?=$about['subtext2']?> </p>
-            </div>
+            </div>-->
 
           </div>
         </div>
@@ -193,7 +217,7 @@ et   de  demain  </h2>
    
     </section><!-- End About Us Section -->
 
-    <section id="services" class="services">
+    <!--<section id="services" class="services">
       <div class="container">
 
         <div class="section-title">
@@ -203,24 +227,30 @@ et   de  demain  </h2>
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
             <div class="icon"><i class="icofont-computer"></i></div>
-            <h4 class="title"><a href="">Cabinet humanitaire et de développement international</a></h4>
+            <h4 class="title"><a href="/Pages/humanitaire">Cabinet humanitaire et de développement international</a></h4>
             <p class="description">spécialisé dans la formation, l’insertion professionnel des acteurs humanitaires /communautaires et l’accompagnement des organisations nationales et internationales d’aide et de développement, les acteurs du secteur social et médico-social</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-            <h4 class="title"><a href="">Import / Export</a></h4>
+            <h4 class="title"><a href="#">Import / Export</a></h4>
             <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="icofont-earth"></i></div>
-            <h4 class="title"><a href="">Evernementielle</a></h4>
+            <h4 class="title"><a href="">Communication et Evernementielle</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">Fourniture de bureau et divers</a></h4>
             <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
         
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>-->
+    <!-- End Services Section -->
 
 
     <!-- ======= Our Portfolio Section ======= -->
@@ -229,7 +259,7 @@ et   de  demain  </h2>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="section-title">
-          <h2>Our Portfolio</h2>
+          <h2>Galerie</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -238,22 +268,32 @@ et   de  demain  </h2>
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
            
-             
+             <?php $service[]=""; ?>
                
-              <?php foreach ($services as $key => $service) { ?>
-              <li data-filter=".filter-<?=$key?>"><?=$service['title']?></li>
+              <?php foreach ($portfolios as  $portfolio) { ?>
+                <?php if ( in_array($portfolio['service_id'], $service)) {
+                  # code...
+
+                }else {
+                  # code...
+                  
+                  $service[]=$portfolio['service_id'];
+               
+                   ?>
+              <li data-filter=".filter-<?=$portfolio['service_id']?>"><?=$portfolio['service']['title']?></li>
              
               <?php 
+               }
         } ?>
             </ul>
           </div>
         </div>
         
         <div class="row portfolio-container">
-        <?php foreach ($services as $key => $service) { ?>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-<?=$key?>">
-          <?php foreach ($portfolios as $keyp=> $portfolio) { ?>
-          <?php if ($key==$keyp) { ?>
+        <?php foreach ($portfolios as  $portfolio) { ?>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-<?=$portfolio['service_id']?>">
+        
+          
             <div class="portfolio-wrap">
               <img src="/portfolio/<?=$portfolio['imagename']?>" class="img-fluid_1" alt="">
               <div class="portfolio-info">
@@ -264,14 +304,15 @@ et   de  demain  </h2>
                   <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
                 </div>
               </div>
-              <?php } else {continue;}?>
+              </div>
+            
            
-           <?php 
-         } ?>
+        
             </div>
-          </div>
-          <?php 
+            <?php 
         } ?>
+          </div>
+         
         </div>
         
       </div>
@@ -422,7 +463,7 @@ et   de  demain  </h2>
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact Us</h2>
+          <h2>Contact </h2>
         </div>
 
         <div class="row">
@@ -430,51 +471,51 @@ et   de  demain  </h2>
           <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
             <div class="info-box">
               <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <h3> Address</h3>
+              <p>Côte d'Ivoire - Abidjan/Cocody</p>
             </div>
           </div>
 
           <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="info-box">
               <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>info@example.com<br>contact@example.com</p>
+              <h3>Email </h3>
+              <p><strong>infos@joshuaconsultng.com</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="info-box ">
               <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+              <h3>Téléphone</h3>
+              <p>+225 577 276 88</p>
             </div>
           </div>
 
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="/backend/Messages/add" method="post" role="form" class="php-email-form">
               <div class="form-row">
                 <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre nom svp" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Votre email svp" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validate"></div>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="objet" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validate"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="description" rows="5" data-rule="required" data-msg="Votre message" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
               <div class="mb-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="error-message">Your message has been sent. Thank youYour</div>
+                <div class="sent-message">Your message has been sent. Thank youYour message has been sent. Thank youYour message has been sent. Thank youYour message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
@@ -510,51 +551,32 @@ et   de  demain  </h2>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
+        
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Nos Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            <li><a href="/Pages/humanitaire">CAbiner Humanitaire</a></li>
+              <li><a href="#">Import / Export</a></li>
+              <li><a href="#">Fourniture de bureau et divers</a></li>
+
+            
+              <li><a href="#">Communication et Evernementielle</a></li>
+              
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
+         
         </div>
       </div>
     </div>
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Mamba</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Joshua</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+       <!--Designed by <a href="https://bootstrapmade.com/">gedeongoh</a>-->
       </div>
     </div>
   </footer><!-- End Footer -->

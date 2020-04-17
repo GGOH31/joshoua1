@@ -567,19 +567,19 @@
                                             
                                         >
                                             <li>
-                                                <a href="elements-buttons-standard.html">
+                                                <a href="/backend/Portfolios/add">
                                                     <i class="metismenu-icon"></i>
                                                     Creer
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="elements-dropdowns.html">
+                                                <a href="/backend/Portfolios/index">
                                                     <i class="metismenu-icon">
                                                     </i>Modifier
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="elements-icons.html">
+                                                <a href="">
                                                     <i class="metismenu-icon">
                                                     </i>Statistiques
                                                 </a>
@@ -690,9 +690,26 @@
                                     
                                     
                                     >
+                                        <a href="/backend/Admins/index">
+                                            <i class="metismenu-icon pe-7s-diamond"></i>
+                                          Messages
+                                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                        </a>
+                                       
+                                    </li>
+                                    <li
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    >
                                         <a href="#">
                                             <i class="metismenu-icon pe-7s-diamond"></i>
-                                           Teames
+                                            Questions Courrant
                                             <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                         </a>
                                         <ul
@@ -738,7 +755,7 @@
                                     >
                                         <a href="#">
                                             <i class="metismenu-icon pe-7s-diamond"></i>
-                                            Questions Courrant
+                                           Artilces
                                             <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                         </a>
                                         <ul
@@ -752,13 +769,13 @@
                                             
                                         >
                                             <li>
-                                                <a href="elements-buttons-standard.html">
+                                                <a href="/backend/articles/add">
                                                     <i class="metismenu-icon"></i>
                                                     Creer
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="elements-dropdowns.html">
+                                                <a href="/backend/articles">
                                                     <i class="metismenu-icon">
                                                     </i>Modifier
                                                 </a>
@@ -824,7 +841,7 @@
                 </div> 
                 
                 
-                
+               
                 
                 <?= $this->fetch('content') ?>
 

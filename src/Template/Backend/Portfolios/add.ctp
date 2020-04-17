@@ -8,7 +8,7 @@
                     <div class="app-main__inner">
 
 <div class="tab-content">
-
+<?= $this->Flash->render() ?>
     <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -18,7 +18,7 @@
                                                     <div class="position-relative form-group"><label for="exampleText" class="">Titre </label><input name="title" id="exampleEmail" placeholder="sous titre" type="text" class="form-control"></div>
         
 
-                                                    <div class="position-relative form-group"><label for="exampleFile" class="">File</label><input name="file" id="exampleFile" type="file" class="form-control-file">
+                                                    <div class="position-relative form-group"><label for="exampleFile" class="">File</label><input name="image" id="exampleFile" type="file" class="form-control-file">
                                                        
                                                     </div>
                                                  
